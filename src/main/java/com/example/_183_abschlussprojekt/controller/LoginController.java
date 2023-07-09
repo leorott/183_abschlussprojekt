@@ -11,7 +11,7 @@ class LoginController {
     }
 
     @GetMapping("/secret")
-    String secret(){
+    String secret() {
         return "secret";
     }
 }

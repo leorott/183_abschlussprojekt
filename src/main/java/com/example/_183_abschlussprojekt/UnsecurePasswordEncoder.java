@@ -1,8 +1,10 @@
 package com.example._183_abschlussprojekt;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 public class UnsecurePasswordEncoder implements PasswordEncoder {
     @Override
     public String encode(CharSequence rawPassword) {
