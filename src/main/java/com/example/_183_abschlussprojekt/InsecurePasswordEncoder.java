@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class UnsecurePasswordEncoder implements PasswordEncoder {
-    private static final Logger logger = LogManager.getLogger(UnsecurePasswordEncoder.class);
+public class InsecurePasswordEncoder implements PasswordEncoder {
+    private static final Logger logger = LogManager.getLogger(InsecurePasswordEncoder.class);
 
     @Override
     public String encode(CharSequence rawPassword) {

@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-    private static final Logger logger = LogManager.getLogger(UnsecurePasswordEncoder.class);
+    private static final Logger logger = LogManager.getLogger(InsecurePasswordEncoder.class);
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
@@ -34,7 +34,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         logger.info("Configuring security filter chain...");
 
-        http.formLogin(form -> form.loginPage("/login").permitAll());
+        http.formLogin(form -> form.loginPage("/login").permitAll().successForwardUrl("/secret"));
         http.logout((logout) -> logout.logoutUrl("/logout/"));
         return null;
     }
@@ -43,6 +43,6 @@ public class WebSecurityConfig {
     public PasswordEncoder passwordEncoder() {
         logger.info("Creating password encoder...");
 
-        return new UnsecurePasswordEncoder();
+        return new InsecurePasswordEncoder();
     }
 }
