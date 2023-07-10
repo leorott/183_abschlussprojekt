@@ -43,6 +43,6 @@ public class WebSecurityConfig {
     public PasswordEncoder passwordEncoder() {
         logger.info("Creating password encoder...");
 
-        return new InsecurePasswordEncoder();
+        return new InsecurePasswordEncoder(); // Replace with BCryptPasswordEncoder
     }
 }
