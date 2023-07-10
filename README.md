@@ -7,12 +7,12 @@
 
 ## Abstract
 
-Das Ziel dieses Projekts ist es, verschiedene Aspekte der Softwareentwicklung zu behandeln, einschließlich
+Das Ziel dieses Projekts ist es, verschiedene Aspekte der Softwareentwicklung zu behandeln, einschliesslich
 Sicherheitslücken und Implementierung des Loggings. Die Haupt-Sicherheitslücke, die in dem Projekt identifiziert wurde,
 besteht darin, dass der MD5-Hash-Algorithmus zur Passwortspeicherung verwendet wird. MD5 gilt aufgrund seiner
 Anfälligkeit für vorberechnete Hash-Angriffe wie Rainbow Tables als unsicher. Um die Sicherheit zu verbessern, wird
 empfohlen, MD5 durch stärkere Hashing-Algorithmen wie bcrypt oder scrypt zu ersetzen, die speziell für die
-Passwortspeicherung entwickelt wurden und zusätzliche Sicherheitsmaßnahmen bieten.
+Passwortspeicherung entwickelt wurden und zusätzliche Sicherheitsmassnahmen bieten.
 
 Das Logging-Konzept in diesem Projekt dient mehreren Zwecken. Erstens erfasst es relevante Ereignisse und Informationen
 während der Laufzeit der Anwendung, um Fehlerbehebung, Fehleranalyse und Anwendungsüberwachung zu unterstützen. Zweitens
@@ -49,7 +49,7 @@ Sicherheitsmechanismen enthalten, um Angriffe zu erschweren.
 
     - INFO: Allgemeine Informationen über den Programmablauf oder Statusmeldungen. WARN: Warnungen vor potenziellen
       Problemen oder fehlerhaften Zuständen, die aber nicht kritisch sind.
-    - ERROR: Fehler, die das ordnungsgemäße Funktionieren der Anwendung beeinträchtigen.
+    - ERROR: Fehler, die das ordnungsgemässe Funktionieren der Anwendung beeinträchtigen.
     - DEBUG: Detaillierte Debugging-Informationen, die normalerweise nur in Entwicklungsumgebungen aktiviert sind.
 
 4. **Log-Ausgabe**:
